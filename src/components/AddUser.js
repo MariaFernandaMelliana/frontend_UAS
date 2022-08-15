@@ -13,8 +13,15 @@ const AddUser = () => {
  
   const saveUser = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("nama", nama);
+    formData.append("nim", nim);
+    formData.append("kelas", kelas);
+    formData.append("semester", semester);
+    formData.append("alamat", alamat);
+    formData.append("jenis_kelamin", jenis_kelamin);
     try {
-      await axios.post("https://backend-uas-nodejs-10.herokuapp.com/users", {
+      await axios.post("https://backend-uas-nodejs-10.herokuapp.com/users", formData, {
         nama,
         nim,
         kelas,
