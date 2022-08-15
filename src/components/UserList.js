@@ -37,8 +37,8 @@ const UserList = () => {
               <th>Nim</th>
               <th>Kelas</th>
               <th>Semester</th>
-              <th>Alamat</th>
               <th>Jenis Kelamin</th>
+              <th>Alamat</th>
               <th>Actions</th>
             </tr>
           </thead>

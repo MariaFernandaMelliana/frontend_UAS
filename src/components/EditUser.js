@@ -7,8 +7,8 @@ const EditUser = () => {
   const [nim, setNim] = useState("");
   const [kelas, setKelas] = useState("");
   const [semester, setSemester] = useState("");
-  const [alamat, setAlamat] = useState("");
   const [jenis_kelamin, setJenis_Kelamin] = useState("Laki-Laki");
+  const [alamat, setAlamat] = useState("");
   const navigate = useNavigate();
   const {id} = useParams();
 
@@ -22,8 +22,8 @@ const EditUser = () => {
     setNim(response.data.nim);
     setKelas(response.data.kelas);
     setSemester(response.data.semester);
-    setAlamat(response.data.alamat);
     setJenis_Kelamin(response.data.jenis_kelamin);
+    setAlamat(response.data.alamat);
   };
  
   const updateUser = async (e) => {
@@ -34,8 +34,8 @@ const EditUser = () => {
         nim,
         kelas,
         semester,
-        alamat,
         jenis_kelamin,
+        alamat,
       });
       navigate("/");
     } catch (error) {
@@ -96,18 +96,6 @@ const EditUser = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">Alamat</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={alamat}
-                onChange={(e) => setAlamat(e.target.value)}
-                placeholder="alamat"
-              />
-            </div>
-          </div>
-          <div className="field">
             <label className="label">Jenis_kelamin</label>
             <div className="control">
               <div className="select is-fullwidth">
@@ -119,6 +107,18 @@ const EditUser = () => {
                   <option value="Perempuan">Perempuan</option>
                 </select>
               </div>
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Alamat</label>
+            <div className="control">
+              <input
+                type="text"
+                className="input"
+                value={alamat}
+                onChange={(e) => setAlamat(e.target.value)}
+                placeholder="alamat"
+              />
             </div>
           </div>
           <div className="field">

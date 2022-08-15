@@ -7,8 +7,8 @@ const AddUser = () => {
   const [nim, setNim] = useState("");
   const [kelas, setKelas] = useState("");
   const [semester, setSemester] = useState("");
-  const [alamat, setAlamat] = useState("");
   const [jenis_kelamin, setJenis_Kelamin] = useState("Laki-Laki");
+  const [alamat, setAlamat] = useState("");
   const navigate = useNavigate();
  
   const saveUser = async (e) => {
@@ -19,8 +19,8 @@ const AddUser = () => {
         nim,
         kelas,
         semester,
-        alamat,
         jenis_kelamin,
+        alamat,
       });
       navigate("/");
     } catch (error) {
@@ -81,18 +81,6 @@ const AddUser = () => {
             </div>
           </div>
           <div className="field">
-            <label className="label">Alamat</label>
-            <div className="control">
-              <input
-                type="text"
-                className="input"
-                value={alamat}
-                onChange={(e) => setAlamat(e.target.value)}
-                placeholder="alamat"
-              />
-            </div>
-          </div>
-          <div className="field">
             <label className="label">Jenis_kelamin</label>
             <div className="control">
               <div className="select is-fullwidth">
@@ -104,6 +92,18 @@ const AddUser = () => {
                   <option value="Perempuan">Perempuan</option>
                 </select>
               </div>
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">Alamat</label>
+            <div className="control">
+              <input
+                type="text"
+                className="input"
+                value={alamat}
+                onChange={(e) => setAlamat(e.target.value)}
+                placeholder="alamat"
+              />
             </div>
           </div>
           <div className="field">
