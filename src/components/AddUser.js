@@ -14,7 +14,7 @@ const AddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://backend-uas-nodejs-10.herokuapp.com/users", {
+      await axios.post("http://localhost:5000/users", {
         nama,
         nim,
         kelas,
